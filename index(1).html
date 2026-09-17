@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mood Jar — Your Mood. Your Jar.</title>
+<style>
+:root{
+  --bg:#fffaf7;--card:#ffffff;--text:#4b3b39;--muted:#806f6b;
+  --pink:#e9b8b2;--pink2:#f5d9d4;--cream:#fff0dc;--brown:#755650;
+  --shadow:0 18px 45px rgba(101,73,66,.10);--radius:24px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+background:linear-gradient(180deg,#fffaf7,#fff7f2);color:var(--text);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,250,247,.9);backdrop-filter:blur(14px);
+display:flex;justify-content:space-between;align-items:center;padding:16px 7%;border-bottom:1px solid #f0e4df}
+.logo{font-weight:800;letter-spacing:.3px}.logo span{font-weight:500;color:#a17c75}
+nav a{color:var(--text);text-decoration:none;margin-left:22px;font-size:14px}
+.hero{max-width:1120px;margin:auto;padding:82px 7% 55px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;background:var(--pink2);padding:8px 14px;border-radius:999px;font-size:13px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.03;margin:18px 0 20px;letter-spacing:-2px}
+h2{font-size:32px;margin:0 0 12px}.lead{font-size:18px;color:var(--muted);max-width:650px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 21px;background:var(--brown);color:white;
+font-weight:700;cursor:pointer;text-decoration:none;margin:8px 8px 0 0}.btn.alt{background:#f2ddd7;color:var(--brown)}
+.hero-art{min-height:390px;border-radius:40px;background:radial-gradient(circle at 50% 35%,#fff 0 16%,transparent 17%),
+linear-gradient(145deg,#f8ded8,#f8eddc);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.jar{width:190px;height:245px;border:8px solid #b98e83;border-radius:28px 28px 45px 45px;background:rgba(255,255,255,.48);
+position:relative;display:flex;align-items:center;justify-content:center;font-size:72px;box-shadow:0 18px 25px rgba(117,86,80,.14)}
+.jar:before{content:"";position:absolute;top:-30px;width:160px;height:34px;background:#b98e83;border-radius:12px}
+section{max-width:1120px;margin:auto;padding:65px 7%}.center{text-align:center}.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{background:var(--card);border:1px solid #f0e5e0;border-radius:var(--radius);padding:25px;box-shadow:var(--shadow)}
+.icon{font-size:30px}.card h3{margin:10px 0 5px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:20px;border-radius:20px;background:#fff0e5}
+.num{width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800}
+.formbox{max-width:780px;margin:25px auto;background:white;border:1px solid #f0e5e0;border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+textarea,input,select{width:100%;padding:14px;border:1px solid #eadbd6;border-radius:16px;background:#fffdfa;color:var(--text);font:inherit;margin:7px 0 16px}
+textarea{min-height:150px;resize:vertical}
+.result{display:none;margin-top:18px;padding:18px;border-radius:18px;background:#fff0e5}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.price{font-size:30px;font-weight:800}.plan.featured{border:2px solid var(--pink)}
+ul{padding-left:20px}.small{font-size:13px;color:var(--muted)}
+footer{padding:40px 7%;background:#5f4844;color:#fff;text-align:center}
+footer .small{color:#eadbd6}
+@media(max-width:800px){nav a{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.cards,.plans{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Mood Jar <span>— Your Mood. Your Jar.</span></div>
+  <div>
+    <a href="#about">Tentang</a><a href="#letout">Let It Out</a><a href="#plans">Subscription</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">a little space, just for you ♡</span>
+    <h1>Your feelings deserve a place.</h1>
+    <p class="lead">Kadang kamu nggak butuh nasihat. Kamu cuma butuh tempat untuk mengeluarkan semuanya. Mood Jar hadir sebagai pengalaman self-care personal yang dimulai dari cerita kecilmu.</p>
+    <a class="btn" href="#letout">Let It Out</a>
+    <a class="btn alt" href="#plans">Lihat Mood Jar</a>
+  </div>
+  <div class="hero-art" aria-label="Ilustrasi toples Mood Jar"><div class="jar">♡</div></div>
+</header>
+
+<section id="about">
+  <div class="center">
+    <h2>Bukan untuk menghakimi. Bukan untuk memaksa kamu baik-baik saja.</h2>
+    <p class="muted">Mood Jar menggabungkan ruang ekspresi digital dengan self-care box yang dikirim ke rumahmu.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">📝</div><h3>Let It Out</h3><p>Tulis apa pun yang sedang memenuhi kepala. Nggak harus rapi, nggak harus masuk akal.</p></div>
+    <div class="card"><div class="icon">🫙</div><h3>Mood-based Box</h3><p>Responsmu membantu kami menyiapkan pengalaman box yang terasa lebih personal.</p></div>
+    <div class="card"><div class="icon">📦</div><h3>Delivered to You</h3><p>Self-care box dikemas dan dikirim sebagai kejutan kecil untuk menemani harimu.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="center"><h2>How it works</h2><p class="muted">Simple. Personal. No pressure.</p></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><b>Tell us</b><br><span class="small">Ceritakan sedikit tentang harimu.</span></div>
+    <div class="step"><div class="num">2</div><b>We read</b><br><span class="small">Cerita kamu menjadi petunjuk untuk pengalamanmu.</span></div>
+    <div class="step"><div class="num">3</div><b>We curate</b><br><span class="small">Tim menyiapkan box yang sesuai.</span></div>
+    <div class="step"><div class="num">4</div><b>Unbox</b><br><span class="small">Buka saat kamu siap. Take your time.</span></div>
+  </div>
+</section>
+
+<section id="letout">
+  <div class="center"><h2>Let It Out 🫶</h2><p class="muted">Nggak perlu mencari kata yang sempurna. Tulis saja apa yang ingin kamu keluarkan.</p></div>
+  <div class="formbox">
+    <label for="feeling"><b>Apa yang sedang ingin kamu keluarkan?</b></label>
+    <textarea id="feeling" placeholder="“Hari ini rasanya...”"></textarea>
+    <label for="energy"><b>Seberapa berat harimu?</b></label>
+    <select id="energy">
+      <option value="light">Aku cuma butuh little reset</option>
+      <option value="middle">Lumayan berat hari ini</option>
+      <option value="heavy">Aku lagi benar-benar overwhelmed</option>
+    </select>
+    <button class="btn" onclick="processMood()">Simpan & Lanjut</button>
+    <div id="result" class="result"></div>
+    <p class="small">Catatan: Mood Jar adalah layanan self-care, bukan layanan diagnosis atau pengganti psikolog/tenaga profesional. Jika kamu berada dalam kondisi darurat atau merasa tidak aman, cari bantuan profesional atau layanan darurat setempat.</p>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="center"><h2>Choose your jar</h2><p class="muted">Pilih cara yang paling nyaman buat kamu.</p></div>
+  <div class="plans">
+    <div class="card"><h3>One-Time Jar</h3><div class="price">Rp99K</div><p class="muted">Satu box untuk satu momen.</p><ul><li>Personalized self-care box</li><li>Digital Let It Out</li><li>Free shipping area tertentu*</li></ul><button class="btn" onclick="choosePlan('One-Time Jar')">Pilih</button></div>
+    <div class="card plan featured"><h3>Monthly Jar</h3><div class="price">Rp89K<span class="small">/bulan</span></div><p class="muted">Teman kecil yang datang tiap bulan.</p><ul><li>1 curated box/bulan</li><li>Personalized experience</li><li>Member-only content</li></ul><button class="btn" onclick="choosePlan('Monthly Jar')">Berlangganan</button></div>
+    <div class="card"><h3>Gift Jar</h3><div class="price">Rp119K</div><p class="muted">Kirim little reminder of care untuk seseorang.</p><ul><li>Gift packaging</li><li>Personal message</li><li>Curated self-care items</li></ul><button class="btn" onclick="choosePlan('Gift Jar')">Pilih</button></div>
+  </div>
+  <p class="small">*Harga pada prototype ini adalah contoh untuk kebutuhan proposal dan dapat disesuaikan setelah perhitungan HPP, margin, dan ongkir.</p>
+</section>
+
+<section>
+  <div class="formbox center">
+    <h2>One more thing…</h2>
+    <p class="muted">Kamu nggak harus selalu kuat. Kadang, mengambil waktu untuk diri sendiri juga termasuk progress.</p>
+    <button class="btn" onclick="alert('Terima kasih sudah memilih memberi ruang untuk dirimu sendiri ♡')">I need a little reminder ♡</button>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Mood Jar</div>
+  <p>Your Mood. Your Jar.</p>
+  <p class="small">A digital self-care experience + curated self-care box.</p>
+</footer>
+
+<script>
+function processMood(){
+  const text=document.getElementById('feeling').value.trim();
+  const level=document.getElementById('energy').value;
+  const result=document.getElementById('result');
+  if(!text){result.style.display='block';result.innerHTML='<b>Pelan-pelan aja.</b><br>Tulis sedikit saja tentang apa yang kamu rasakan, kalau kamu siap.';return;}
+  let msg={
+    light:'Kayaknya kamu butuh little reset. Semoga hari ini bisa dibuat sedikit lebih ringan.',
+    middle:'Hari ini terdengar cukup berat. Terima kasih sudah memberi ruang untuk mengeluarkannya.',
+    heavy:'Kedengarannya kamu sedang membawa banyak hal. Kamu nggak harus menyelesaikan semuanya sekarang. Tarik napas pelan-pelan.'
+  }[level];
+  result.style.display='block';
+  result.innerHTML='<b>Thank you for letting it out ♡</b><br>'+msg+'<br><br><span class="small">Responsmu akan menjadi bagian dari proses personalisasi Mood Jar.</span>';
+}
+function choosePlan(plan){
+  alert(plan+' dipilih. Prototype checkout siap dikembangkan ke pembayaran dan alamat pengiriman.');
+}
+</script>
+</body>
+</html>
